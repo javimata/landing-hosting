@@ -24,7 +24,7 @@
 
 							<div class="box-popup-content">
 								<div class="box-popup-header text-center mb-4">
-									<h1>Cotiza</h1>
+									<h1>¡Contrata ahora!</h1>
 									<h3 class="nombre-producto"></h3>
 									<span class="subtitle"></span>
 								</div>
