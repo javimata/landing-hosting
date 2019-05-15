@@ -1,3 +1,3 @@
 # Landing Hosting (BASE)
 
-<a href="http://demos.javimata.com/landing-hosting/">VER AQUÍ</a>
+<a href="http://demos.javimata.com/landing-hosting/" target="_blank">VER AQUÍ</a>
