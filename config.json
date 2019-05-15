@@ -12,7 +12,8 @@
         "email" : "atencion.clientes@eldominio.com",
         "telefono": "(00) 000 0000",
         "direccion": "Direccion conocida Ciudad cercana en algún pais",
-        "whatsapp": "000000000"
+        "whatsapp": "000000000",
+        "messenger": "#"
     },
     "redes":{
         "facebook": {

@@ -2,36 +2,43 @@
 	
 	$(document).ready(function(){
 
-		$('.slide-logos').slick({
-			autoplay: true,
-			slidesToShow: 6,
-			slidesToScroll: 1,
-			infinite: true,
-			adaptiveHeight: false,
-			centerMode: false,
-			centerPadding: '60px',
-			variableWidth: false,
-			responsive: [
-				{
-					breakpoint: 768,
-					settings: {
-						arrows: false,
-						centerMode: true,
-						centerPadding: '40px',
-						slidesToShow: 4
+		if ( $('.slide-logos').length > 0 ) {
+
+			$('.slide-logos').on('init', function (event, slick) {
+				$(this).fadeIn();
+			});
+
+			$('.slide-logos').slick({
+				autoplay: true,
+				slidesToShow: 6,
+				slidesToScroll: 1,
+				infinite: true,
+				adaptiveHeight: false,
+				centerMode: false,
+				centerPadding: '60px',
+				variableWidth: false,
+				responsive: [
+					{
+						breakpoint: 768,
+						settings: {
+							arrows: false,
+							centerMode: true,
+							centerPadding: '40px',
+							slidesToShow: 4
+						}
+					},
+					{
+						breakpoint: 480,
+						settings: {
+							arrows: false,
+							centerMode: true,
+							centerPadding: '40px',
+							slidesToShow: 3
+						}
 					}
-				},
-				{
-					breakpoint: 480,
-					settings: {
-						arrows: false,
-						centerMode: true,
-						centerPadding: '40px',
-						slidesToShow: 3
-					}
-				}
-			]
-		});
+				]
+			});
+		}
 
 		$('ul.menu-movil a').on('click', function(){
 			$(".navbar-toggler").click();
@@ -55,6 +62,15 @@
 					$(".floating").addClass('sticky-top');
 				} else {
 					$(".floating").removeClass('sticky-top');
+				}
+			});
+		}
+		if ($('.floating-messenger').length > 0) {
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 100) {
+					$(".floating-messenger").addClass('sticky-top');
+				} else {
+					$(".floating-messenger").removeClass('sticky-top');
 				}
 			});
 		}
@@ -157,7 +173,7 @@
 					$('.scrollup').fadeOut(400);
 				}
 			});
-			$('.scrollup').click(function(){
+			$('.scrollup,.navbar-brand').click(function(){
 				$("html, body").animate({scrollTop:0},600);
 				return false;
 			});
@@ -179,7 +195,14 @@
 			}
 		});
 
+		$('#navbarMain2').on('show.bs.collapse', function () {
+			$('section#header').addClass("opened");
+		});
 
+		$('#navbarMain2').on('hidden.bs.collapse', function () {
+			$('section#header').removeClass("opened");
+		});
+		
 		/**
 		 * Agrega la navegación scroll de una sola página
 		 * Se deben agregar los enlaces con el hash # y el ID de la sección a enlazar

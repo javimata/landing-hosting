@@ -134,7 +134,7 @@ $config = getConfig();
 					<div class="col-8">
 						<nav class="navbar navbar-expand-lg float-right float-lg-none p-0">
 							<button class="navbar-toggler p-0" type="button" data-toggle="collapse" data-target="#navbarMain2" aria-controls="navbarMain2" aria-expanded="false" aria-label="Toggle navigation">
-								<span class="navbar-toggler-icon text-white"><i class="fas fa-bars fa-lg"></i></span>
+								<span class="navbar-toggler-icon text-white d-inline"><i class="fas fa-bars fa-lg"></i></span>
 							</button>
 							<div class="collapse navbar-collapse" id="navbarMain">
 								<ul class="navbar-nav w-100 justify-content-end align-items-end">
@@ -146,7 +146,7 @@ $config = getConfig();
 							</div>
 						</nav>
 					</div>		
-					<div class="col-12 d-lg-none">
+					<div class="col-12 d-lg-none bg-menu">
 						<div class="collapse navbar-collapse" id="navbarMain2">
 							<ul class="navbar-nav w-100 align-items-center menu-movil">
 								<?php echo createMenu($config->menu, 'li'); ?>
@@ -276,8 +276,7 @@ $config = getConfig();
 						<div class="box-content text-white" data-aos="fade-right" data-aos-delay="600">
 							<h2 class="mb-1">Beneficios</h2>
 							<span class="subtitle mb-3 d-block">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
-							<div class="box-content-text"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio voluptate laudantium, magnam autem ratione id ipsam dolore atque asperiores? Iusto ipsam culpa accusantium quos nostrum eligendi unde cupiditate perspiciatis tempore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam quibusdam quaerat vero sed pariatur. Mollitia, laudantium minima! Exercitationem officia veniam quis. Fuga odit architecto officiis commodi dicta vel officia culpa!</p>
-							<p>Mollitia, laudantium minima! Exercitationem officia veniam quis. Fuga odit architecto officiis commodi dicta vel officia culpa!</p>
+							<div class="box-content-text"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio voluptate laudantium, magnam autem ratione id ipsam dolore atque asperiores? Iusto ipsam culpa accusantium quos nostrum eligendi unde cupiditate perspiciatis tempore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam quibusdam quaerat vero sed pariatur. </p>
 							</div>
 						</div>
 					</div>
@@ -299,7 +298,7 @@ $config = getConfig();
 					<div><img src="<?php echo $file; ?>" class="img-fluid" alt="Logo" /></div>
 					<?php endforeach; ?>
 				</div>
-			
+
 			</div>
 
 		</section>
