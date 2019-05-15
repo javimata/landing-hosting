@@ -3,6 +3,11 @@
 // ini_set("display_errors", 1);
 
 use \DrewM\MailChimp\MailChimp;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+// Load Composer's autoloader
+require '../vendor/autoload.php';
 
 require_once "functions.php";
 $config = getConfig($sub = true);
@@ -32,7 +37,7 @@ if ( isset($_REQUEST['form']) ) {
 	if ( $useMailchimp->use == 1 && $form->mailchimpList != "" ){
 
 		$mailchimpApi = $useMailchimp->api;
-		include('Mailchimp.php');
+		// include('Mailchimp.php');
 		$MailChimp = new MailChimp($mailchimpApi);
 		$mailchimpList = $form->mailchimpList;
 		$mailchimpData = new stdClass;
@@ -45,7 +50,7 @@ if ( isset($_REQUEST['form']) ) {
 		$body = "<strong>Datos del solicitante:</strong><br>";
 		foreach ($form->fields as $key => $field) {
 			if ( $field->attribs->type != "submit" ) {
-				$body .= '<strong>'.$field->name.'</strong>: ' . $_REQUEST[$field->name] . "<br>";
+				$body .= '<strong>'.ucfirst($field->name).'</strong>: ' . $_REQUEST[$field->name] . "<br>";
 			}
 			if ( $field->name == "email" ) {
 				$email = $_REQUEST["email"];
@@ -70,11 +75,11 @@ if ( isset($_REQUEST['form']) ) {
 
 	if ( $success == 1 && filter_var($email, FILTER_VALIDATE_EMAIL) ){
 
-		require "php-mailer/PHPMailerAutoload.php";
+		$mail = new PHPMailer(true);
 
-		$mail = new PHPMailer;
-
-
+		/**
+		 * Completa los datos si se requiere autenticación
+		 */
 		if ( $auth == 1 ):
 
 			$mail->isSMTP();
@@ -92,13 +97,27 @@ if ( isset($_REQUEST['form']) ) {
 		$mail->CharSet = 'UTF-8';
 
 
-		$mail->addReplyTo($replyTo,$nombre);
+		$mail->addReplyTo($email,$nombre);
 		$mail->setFrom($from, $fromName, 0);
-		$mail->addAddress($to, $nombre);
 
-		if ( $cc ) { $mail->AddCC($cc); }
-		if ( $bcc ) { $mail->AddBCC($bcc); }
+		$mailTo = explode(",",$to);
+		foreach ($mailTo as $mto) {
+			$mail->addAddress($mto);
+		}
 
+		if ( $cc ) { 
+			$mailCC = explode(",",$cc); 
+			foreach ($mailCC as $mcc) {
+				$mail->addCC($mcc);
+			}
+		}
+		if ( $bcc ) { 
+			$mailBCC = explode(",",$bcc); 
+			foreach ($mailBCC as $mbcc) {
+				$mail->addBCC($mbcc);
+			}
+		}
+		
 		$mail->Subject = $subject;
 		$mail->CharSet = 'UTF-8';
 		$mail->msgHTML($body);
@@ -139,7 +158,7 @@ if ( isset($_REQUEST['form']) ) {
 	}else{
 
 		$responder = 3;
-		$texto_respuesta = "Ha ocurrido un error en el envio. - ";
+		$texto_respuesta = "Ha ocurrido un error en el envio. - " . $mail;
 
 	}
 

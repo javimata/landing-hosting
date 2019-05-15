@@ -210,7 +210,7 @@
                         "classContainerValues": "form-check",
                         "classLabel": "",
                         "label": "¿Actualmente cuenta con una página web?",
-                        "required": 0
+                        "required": 1
                     }
                 },
                 "comentarios": {
@@ -267,12 +267,11 @@
         },
         "mailer": {
             "auth": 0,
-            "to": "contacto@frequenzaeventos.com",
+            "to": "javimata@gmail.com",
             "cc": "",
-            "bcc": "osuna@adview.mx",
-            "replyTo": "",
-            "from": "contacto@frequenzaeventos.com",
-            "fromName": "Frequenza",
+            "bcc": "",
+            "from": "mail@localhost.com",
+            "fromName": "Hosting",
             "host": "",
             "port": "",
             "smtpSecure": "tls",

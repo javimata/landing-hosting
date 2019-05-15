@@ -367,6 +367,7 @@ function createFieldbyType( $fieldMain ){
                 if (strpos($valor, '[*]') !== false) {
                     $fieldHTML .= 'checked';
                 }
+                $fieldHTML .= ($field->required == 1) ? ' required' : '';
                 $fieldHTML .= '>';
 
                 $fieldHTML .= '<label class="form-check-label" for="'.$field->id.$valor.'">';

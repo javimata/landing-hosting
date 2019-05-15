@@ -186,41 +186,41 @@
 		 * las opciones .not son los negativos a agregar como enlaces de scroll
 		 */
 		$('a[href*="#"]')
-		// Remove links that don't actually link to anything
-		.not('[href="#"]')
-		.not('[href="#0"]')
-		.not('[data-toggle="collapse"]')
-		.click(function(event) {
-			// On-page links
-			if (
-			location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-			&& 
-			location.hostname == this.hostname
-			) {
-			// Figure out element to scroll to
-			var target = $(this.hash);
-			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-			// Does a scroll target exist?
-			if (target.length) {
-				// Only prevent default if animation is actually gonna happen
-				event.preventDefault();
-				// var offsetpos = (target.offset().top - 290);
-				// alert( target + offsetpos );
-				$('html, body').animate({
-				scrollTop: target.offset().top
-				}, 1000, function() {
-				// Callback after animation
-				// Must change focus!
-				var $target = $(target);
-				//$target.focus();
-				if ($target.is(":focus")) { // Checking if the target was focused
-					return false;
-				} else {
-					$target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-				//$target.focus(); // Set focus again
-				};
-				});
-			}
+			// Remove links that don't actually link to anything
+			.not('[href="#"]')
+			.not('[href="#0"]')
+			.not('[data-toggle="collapse"]')
+			.click(function(event) {
+				// On-page links
+				if (
+				location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+				&& 
+				location.hostname == this.hostname
+				) {
+				// Figure out element to scroll to
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+				// Does a scroll target exist?
+				if (target.length) {
+					// Only prevent default if animation is actually gonna happen
+					event.preventDefault();
+					// var offsetpos = (target.offset().top - 290);
+					// alert( target + offsetpos );
+					$('html, body').animate({
+					scrollTop: target.offset().top
+					}, 1000, function() {
+					// Callback after animation
+					// Must change focus!
+					var $target = $(target);
+					//$target.focus();
+					if ($target.is(":focus")) { // Checking if the target was focused
+						return false;
+					} else {
+						$target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+					//$target.focus(); // Set focus again
+					};
+					});
+				}
 			}
 		});
 
@@ -242,7 +242,7 @@
 
 			if (errores!=1){
 
-				$("#" + id + " button.btn-primary").attr("disabled","disabled");
+				$("#" + id + " button.btn").attr("disabled","disabled");
 
 				$.ajax({ 
 					method: "POST",
@@ -252,7 +252,7 @@
 					success: function( data ) {
 						if (parseInt(data.respuesta)==1){
 							cajaError.empty().addClass("alert alert-info").append(data.texto_respuesta);
-							$("#" + id + " button.btn-primary").removeAttr("disabled");
+							$("#" + id + " button.btn").removeAttr("disabled");
 							$("#" + id)[0].reset();
 
 							if (typeof gtag == 'function') {
@@ -266,14 +266,14 @@
 
 						}else{
 							alert(data.texto_respuesta);
-							$("#" + id + " button.btn-primary").removeAttr("disabled");
+							$("#" + id + " button.btn").removeAttr("disabled");
 						};
 					}
 				});
 
 				
 			}else{
-				$("#" + id + " button#btn-enviar").removeAttr("disabled");
+				$("#" + id + " button.btn").removeAttr("disabled");
 
 			};
 
