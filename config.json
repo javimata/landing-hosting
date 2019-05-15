@@ -65,7 +65,7 @@
             "containerId": "",
             "attribs": {},
             "mailchimpList": "",
-            "titleMail": "Solicitud de cotización - Frequenza",
+            "titleMail": "Solicitud de cotización - Hosting",
             "successMail": "Gracias por solicitar nuestro folleto, en breve lo recibirá en el email indicado",
             "errorMail": "",
             "errorBox": "caja_error",
@@ -148,12 +148,12 @@
             "attribs": {},
             "mailchimpList": "",
             "errorBox": "form-group col-12 caja_error",
-            "titleMail": "Solicitud de contacto - Frequenza",
+            "titleMail": "Solicitud de contacto - Hosting",
             "successMail": "Gracias por contactarnos, en breve le daremos seguimiento a su solicitud",
             "errorMail": "",
             "fields": {
                 "nombre": {
-                    "class": "form-group col-md-4",
+                    "class": "form-group col-md-6",
                     "id": "",
                     "name": "nombre",
                     "mailchimpField": "FNAME",
@@ -167,7 +167,7 @@
                     }
                 },
                 "email": {
-                    "class": "form-group col-md-4",
+                    "class": "form-group col-md-6",
                     "id": "",
                     "name": "email",
                     "attribs": {
@@ -179,17 +179,37 @@
                         "required": 1
                     }
                 },
-                "celular": {
-                    "class": "form-group col-md-4",
+                "hosting": {
+                    "class": "form-group col-md-6 form-inline",
                     "id": "",
-                    "name": "telefono",
-                    "mailchimpField": "PHONE",
+                    "name": "hosting",
+                    "mailchimpField": "",
                     "attribs": {
-                        "type": "tel",
-                        "class": "form-control",
-                        "id": "",
-                        "value": "",
-                        "placeholder": "Telefono",
+                        "type": "checkbox",
+                        "class": "form-check-input",
+                        "classContainer": "form-check-inline pl-3",
+                        "id": "hosting",
+                        "value": "Si|No",
+                        "classContainerValues": "form-check",
+                        "classLabel": "",
+                        "label": "¿Actualmente cuenta con un hosting web?",
+                        "required": 0
+                    }
+                },
+                "pagina": {
+                    "class": "form-group col-md-6 form-inline",
+                    "id": "",
+                    "name": "pagina",
+                    "mailchimpField": "",
+                    "attribs": {
+                        "type": "radio",
+                        "class": "form-check-input",
+                        "classContainer": "form-check-inline pl-3",
+                        "id": "pagina",
+                        "value": "Si|No",
+                        "classContainerValues": "form-check",
+                        "classLabel": "",
+                        "label": "¿Actualmente cuenta con una página web?",
                         "required": 0
                     }
                 },
@@ -212,7 +232,7 @@
                     "id": "",
                     "attribs": {
                         "type": "submit",
-                        "class": "btn btn-primary px-md-5",
+                        "class": "btn btn-secondary px-md-5",
                         "id": "",
                         "value": "Cotizar",
                         "attribs": {}

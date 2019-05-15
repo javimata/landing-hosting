@@ -256,8 +256,6 @@ function createFieldbyType( $fieldMain ){
             $fieldHTML .= '/>';
             break;
 
-
-
         case 'select':
 
             if ( $field->label ) {
@@ -293,6 +291,46 @@ function createFieldbyType( $fieldMain ){
     
             break;
 
+        case 'estado':
+
+            $estados = "Aguascalientes,Baja California,Baja California Sur,Campeche,Chiapas,Chihuahua,Coahuila,Colima,Durango,Estado de México,Guanajuato,Guerrero,Hidalgo,Jalisco,Michoacán,Morelos,Nayarit,Nuevo León,Oaxaca,Puebla,Querétaro,Quintana Roo,San Luis Potosí,Sinaloa,Sonora,Tabasco,Tamaulipas,Tlaxcala,Veracruz,Yucatán,Zacatecas";
+
+            if ( $field->label ) {
+                $fieldHTML .= '<label for="'.$field->id.'">'.$field->label.'</label>';
+            }
+
+            $fieldHTML .= '<select ';
+            $fieldHTML .= 'name="'.$fieldMain->name.'" ';
+            $fieldHTML .= ($field->class) ? 'class="'.$field->class.'" ': '' ;
+            $fieldHTML .= ($field->id) ? 'id="'.$field->id.'" ': '' ;
+            if ( count( $field->attribs ) > 0 ){ $fieldHTML .= addAttribs($field->attribs); }
+            $fieldHTML .= ($field->required == 1) ? 'required ' : '';
+            $fieldHTML .= '>';
+
+            $fieldHTML .= ($field->placeholder) ? '<option value="">'.$field->placeholder.'</option>': '</option>- Selecciona -</option>' ;
+
+            if ( $field->value != "" ) {
+                $fieldHTML .= '<option value="'.$field->value.'">'.$field->value.'</option>';
+            }
+
+            $valores = explode(",",$estados);
+
+            foreach($valores as $valor) {
+
+                $fieldHTML .= '<option value="';
+                $fieldHTML .= str_replace('[*]','',$valor) . '" ';
+                if (strpos($valor, '[*]') !== false) {
+                    $fieldHTML .= 'selected';
+                }
+                $fieldHTML .= '>';
+                $fieldHTML .= str_replace('[*]','',$valor);
+                $fieldHTML .= '</option>';
+
+            }
+
+            $fieldHTML .= '</select>';            
+            break;
+
         case 'textarea':
 
             if ( $field->label ) {
@@ -313,22 +351,33 @@ function createFieldbyType( $fieldMain ){
             
         case 'radio':
         case 'checkbox':
-            $fieldHTML .= '<div class="form-check">';
-            $fieldHTML .= '<input type="'.$field->type.'" ';
-            $fieldHTML .= 'name="'.$fieldMain->name.'" ';
-            $fieldHTML .= ($field->placeholder) ? 'placeholder="'.$placeholder.'" ': '' ;
-            $fieldHTML .= ($field->class) ? 'class="'.$field->class.'" ': '' ;
-            $fieldHTML .= ($field->id) ? 'id="'.$field->id.'" ': '' ;
-            $fieldHTML .= ($field->value) ? 'value="'. replaceValues($field->value).'" ': '' ;
-            $fieldHTML .= ($field->required == 1) ? 'required ' : '';
-            if ( count( $field->attribs ) > 0 ){ $fieldHTML .= addAttribs($field->attribs); }
-            $fieldHTML .= '/>';
+
             if ( $field->label ) {
-                $fieldHTML .= '<label class="'.$field->labelClass.'" for="'.$field->id.'">'.$field->label.'</label>';
+                $fieldHTML .= '<label class="'.$field->classLabel.'">'.$field->label.'</label>';
             }
+
+            $fieldHTML .= '<div class="'.$field->classContainerValues.'">';
+
+            $valores = explode("|",$field->value);
+
+            foreach($valores as $valor) {
+
+                $fieldHTML .= '<div class="'.$field->classContainer.'">';
+                $fieldHTML .= '<input class="'.$field->class.'" type="'.$field->type.'" name="'.$field->id.'" id="'.$field->id.$valor.'" value="'.$valor.'" '; 
+                if (strpos($valor, '[*]') !== false) {
+                    $fieldHTML .= 'checked';
+                }
+                $fieldHTML .= '>';
+
+                $fieldHTML .= '<label class="form-check-label" for="'.$field->id.$valor.'">';
+                $fieldHTML .= str_replace('[*]','',$valor);
+                $fieldHTML .= '</label>';
+                $fieldHTML .= '</div>';
+                
+            }
+
             $fieldHTML .= '</div>';
             break;
-
             
         case 'title':
             $tag = ( $field->tag != "" ) ? $field->tag : "p";
@@ -398,5 +447,32 @@ function replaceValues( $value = NULL ) {
     $value = str_replace( $arrayBase, $arrayReplace, $value );
 
     return $value;
+
+}
+
+
+/**
+ * Slug
+ * @param string string for slugged
+ */
+function createSlug($string) {
+
+    $table = array(
+            'Š'=>'S', 'š'=>'s', 'Đ'=>'Dj', 'đ'=>'dj', 'Ž'=>'Z', 'ž'=>'z', 'Č'=>'C', 'č'=>'c', 'Ć'=>'C', 'ć'=>'c',
+            'À'=>'A', 'Á'=>'A', 'Â'=>'A', 'Ã'=>'A', 'Ä'=>'A', 'Å'=>'A', 'Æ'=>'A', 'Ç'=>'C', 'È'=>'E', 'É'=>'E',
+            'Ê'=>'E', 'Ë'=>'E', 'Ì'=>'I', 'Í'=>'I', 'Î'=>'I', 'Ï'=>'I', 'Ñ'=>'N', 'Ò'=>'O', 'Ó'=>'O', 'Ô'=>'O',
+            'Õ'=>'O', 'Ö'=>'O', 'Ø'=>'O', 'Ù'=>'U', 'Ú'=>'U', 'Û'=>'U', 'Ü'=>'U', 'Ý'=>'Y', 'Þ'=>'B', 'ß'=>'Ss',
+            'à'=>'a', 'á'=>'a', 'â'=>'a', 'ã'=>'a', 'ä'=>'a', 'å'=>'a', 'æ'=>'a', 'ç'=>'c', 'è'=>'e', 'é'=>'e',
+            'ê'=>'e', 'ë'=>'e', 'ì'=>'i', 'í'=>'i', 'î'=>'i', 'ï'=>'i', 'ð'=>'o', 'ñ'=>'n', 'ò'=>'o', 'ó'=>'o',
+            'ô'=>'o', 'õ'=>'o', 'ö'=>'o', 'ø'=>'o', 'ù'=>'u', 'ú'=>'u', 'û'=>'u', 'ý'=>'y', 'ý'=>'y', 'þ'=>'b',
+            'ÿ'=>'y', 'Ŕ'=>'R', 'ŕ'=>'r', '/' => '-', ' ' => '-'
+    );
+
+    // -- Remove duplicated spaces
+    $stripped = preg_replace(array('/\s{2,}/', '/[\t\n]/'), ' ', $string);
+
+    // -- Returns the slug
+    return strtolower(strtr($string, $table));
+
 
 }
