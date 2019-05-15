@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.php",
   "scripts": {
-    "test": "test",
-    "build": "webpack",
-    "watch": "webpack --watch"
+    "test": "test"
   },
   "author": "",
   "license": "ISC",
