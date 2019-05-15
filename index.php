@@ -132,7 +132,7 @@ $config = getConfig();
 						</a>
 					</div>
 					<div class="col-8">
-						<nav class="navbar navbar-expand-lg float-right float-lg-none p-0">
+						<nav class="navbar navbar-expand-lg float-right float-lg-none p-0" data-aos="fade-right" data-aos-delay="300">
 							<button class="navbar-toggler p-0" type="button" data-toggle="collapse" data-target="#navbarMain2" aria-controls="navbarMain2" aria-expanded="false" aria-label="Toggle navigation">
 								<span class="navbar-toggler-icon text-white d-inline"><i class="fas fa-bars fa-lg"></i></span>
 							</button>
@@ -171,14 +171,14 @@ $config = getConfig();
 
 		<section id="paquetes" class="py-5">
 
-			<header id="header-section" class="text-center mb-4" data-aos="fade-up" data-aos-delay="300">
+			<header id="header-section" class="text-center mb-4" data-aos="fade-up" data-aos-delay="0">
 				<h2 class="title-section">Paquetes</h2>
 			</header>
 
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-4">
-						<div class="card card-paquetes mb-3 mb-lg-0 shadow">
+						<div class="card card-paquetes mb-3 mb-lg-0 shadow" data-aos="fade-up" data-aos-delay="300">
 							<div class="card-header text-center">
 								<div class="content-header">
 									<h3>Básico</h3>
@@ -205,7 +205,7 @@ $config = getConfig();
 						</div>
 					</div>
 					<div class="col-lg-4">
-						<div class="card card-paquetes mb-3 mb-lg-0 shadow featured">
+						<div class="card card-paquetes mb-3 mb-lg-0 shadow featured" data-aos="fade-up" data-aos-delay="600">
 							<div class="card-header text-center">
 								<div class="feature">Más vendido</div>
 								<div class="content-header">
@@ -233,7 +233,7 @@ $config = getConfig();
 						</div>
 					</div>
 					<div class="col-lg-4">
-						<div class="card card-paquetes mb-3 mb-lg-0 shadow">
+						<div class="card card-paquetes mb-3 mb-lg-0 shadow" data-aos="fade-up" data-aos-delay="900">
 							<div class="card-header text-center">
 								<div class="content-header">
 									<h3>Plus</h3>
@@ -309,11 +309,11 @@ $config = getConfig();
 				<div class="row">
 					<div class="col">
 
-						<header id="header-section" class="text-center">
+						<header id="header-section" class="text-center" data-aos="fade-up" data-aos-delay="300">
 							<h4 class="title-section">¿Encontraste la opción que deseas?</h4>
 						</header>
 
-						<div class="box-form">
+						<div class="box-form" data-aos="fade-up" data-aos-delay="600">
 							<div class="form-text text-center mb-3">
 								Es posible cotizar según tus necesidades, déjanos tus datos y te contactamos para presentarte una propuesta personalizada.
 							</div>
@@ -322,7 +322,7 @@ $config = getConfig();
 
 						</div>
 
-						<div class="box-direccion-footer text-center">
+						<div class="box-direccion-footer text-center" data-aos="fade-down" data-aos-delay="300">
 
 							<?php echo $config->contactos->direccion; ?><br>
 							Teléfono y Whatsapp<br>
@@ -332,7 +332,7 @@ $config = getConfig();
 
 					</div>
 
-					<div class="col-12 col-copy text-center mt-5">
+					<div class="col-12 col-copy text-center mt-5" data-aos="fade-up" data-aos-delay="300" data-aos-offset="0">
 						<?php echo replaceValues($config->info->copyright); ?> 
 					</div>
 				</div>
@@ -405,7 +405,7 @@ $config = getConfig();
 		AOS.init({
 			easing: 'ease-out-back',
 			duration: 1000,
-			once: true
+			once: false
 		});
 		</script>
 		<?php endif; ?>
