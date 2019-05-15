@@ -37,25 +37,25 @@ $config = getConfig();
 		<?php endif; ?>
 
 		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
 		<?php if ( $config->configuracion->assets->slick == 1 ): ?>
-		<link rel="stylesheet" type="text/css" href="./node_modules/slick-carousel/slick/slick.css">
-		<link rel="stylesheet" type="text/css" href="./node_modules/slick-carousel/slick/slick-theme.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
 		<?php endif; ?>
 
 		<?php if ( $config->configuracion->assets->fontawesome == 1 ): ?>
-		<link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 		<?php endif; ?>
 
 		<?php if ( $config->configuracion->assets->animate == 1 ): ?>
-		<link rel="stylesheet" href="./node_modules/animate.css/animate.min.css">
+		<link rel="stylesheet" href="assets/css/animate.css">
 		<?php endif; ?>
 		<?php if ( $config->configuracion->assets->aos == 1 ): ?>
-		<link rel="stylesheet" href="./node_modules/aos/dist/aos.css">
+		<link rel="stylesheet" href="assets/css/aos.css">
 		<?php endif; ?>
 
-		<link rel="stylesheet" href="./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 
 		<link rel="stylesheet" href="assets/css/styles.css">
 
@@ -357,17 +357,18 @@ $config = getConfig();
 		<?php endif; ?>
 
 		<!-- jQuery -->
-		<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 		<!-- Bootstrap JavaScript -->
-		<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 		<?php if ( $config->configuracion->assets->matchHeight == 1 ): ?>
-		<script src="./node_modules/jquery-match-height/dist/jquery.matchHeight-min.js"></script>
+		<script src="https://cdn.javimata.com/assets/js/jquery.matchHeight-min.js"></script>
 		<?php endif; ?>
 
 		<?php if ( $config->configuracion->assets->slick == 1 ): ?>
-		<script type="text/javascript" src="./node_modules/slick-carousel/slick/slick.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 		<?php endif; ?>
 
 		<?php if ( $config->configuracion->revolution == 1 ): ?>
@@ -380,17 +381,16 @@ $config = getConfig();
 		<script src="revolution/js/extensions/revolution.extension.carousel.min.js"></script>
 		<script src="revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
 		<script src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-		<script src="revolution/js/extensions/revolution.extension.migration.min.js"></script>
 		<script src="revolution/js/extensions/revolution.extension.navigation.min.js"></script>
 		<script src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
 		<script src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
 		<script src="revolution/js/extensions/revolution.extension.video.min.js"></script>
 		<?php endif; ?>
 
-		<script src="./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 		
 		<?php if ( $config->configuracion->loading == 1 || $config->configuracion->particlesFooter == 1 ): ?>
-		<script src="./node_modules/particles.js/particles.js"></script>
+		<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 		<?php endif; ?>
 		<?php if ( $config->configuracion->loading == 1 ): ?>
 		<script>
@@ -399,7 +399,7 @@ $config = getConfig();
 		<?php endif; ?>
 
 		<?php if ( $config->configuracion->assets->aos == 1 ): ?>
-		<script src="./node_modules/aos/dist/aos.js"></script>
+		<script src="assets/js/aos.js"></script>
 		<script>
 		
 		AOS.init({
