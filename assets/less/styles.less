@@ -1,0 +1,468 @@
+/*---------- PRESETS ----------*/
+@primary:     #2d1238;
+@secondary:   #191919;
+@black:       #000;
+@white:       #fff;
+@gray:        #f3f2f2;
+@dark:		  #464646;
+@orange:      #df9f15;
+
+@font1:       'Roboto', serif;
+@font2:		  'Open Sans', sans-serif;
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: @font1;
+}
+html {
+	overflow-x: hidden;
+}
+body {
+	background: @white;
+	font-family: @font2;
+	font-size: 20px;
+	color: @black;
+	position: relative;
+	font-weight: 300;
+	overflow-x: hidden;
+}
+
+.floating {
+	position: fixed;
+	top: 160px; 
+	right: 20px;
+	z-index: 1099;
+	transition: all 300ms;
+	@media ( max-width: 767px ) {
+		width: 40px;
+		height: 40px;
+		top: 100px;
+	}
+	&.sticky-top {
+		top: 70px;
+		width: 50px;
+		height: 50px;
+	}
+}
+
+#header {
+	background: rgba(0,0,0,0);
+	color: @white;
+	z-index: 1001;
+	transition: all 300ms;
+	a {
+		color: @white;
+		&.navbar-brand {
+			transition: all 300ms;
+		}
+	}
+	nav.navbar {
+		ul.navbar-nav {
+			li {
+				text-align: center;
+				padding: 10px 0;
+				font-size: 16px;
+				font-family: @font1;
+				font-weight: 400;
+				a {
+					font-size: 16px;
+					font-family: @font1;
+					font-weight: 400;
+					letter-spacing: 1px;
+					padding: 0 1rem;
+					transition: all 300ms;
+				}
+				&:hover {
+					a {
+						color: @orange;
+					}
+				}
+			}
+		}
+	}
+	ul.menu-movil li {
+		padding: 10px 0;
+	}
+	&.sticky {
+		background: rgba(0,0,0,0.9);
+		height: 60px;
+		a.navbar-brand {
+			img {
+				height: 40px;
+			}
+		}
+	}
+}
+
+section#beneficios {
+	background: url('../../images/fondo-beneficios.jpg') no-repeat;
+	background-attachment: scroll;
+	background-size: cover;
+}
+
+
+header#header-section {
+	.title-section {
+		font-size: 90px;
+	}
+	@media ( min-width: 768px ) and ( max-width: 991px ) {
+		.title-section {
+			font-size: 60px;
+		}
+	}
+	@media ( max-width: 767px ) {
+		.title-section {
+			font-size: 45px;
+		}
+	}
+}
+
+.box-content {
+	h2 {
+		font-size: 90px;
+	}
+	span.subtitle{
+		font-size: 20px;
+	}
+	.box-content-text {
+		font-size: 16px;
+	}
+	@media ( min-width: 768px ) and ( max-width: 991px ) {
+		h2 {
+			font-size: 60px;
+		}
+	}
+	@media ( max-width: 767px ) {
+		h2 {
+			font-size: 45px;
+		}
+	}
+}
+.card.card-paquetes {
+	border: 0;
+	background: rgba(255,255,255,.85);
+	.card-header {
+		background: @primary;
+		color: @white;
+		font-size: 20px;
+		padding: .75rem 0;
+		.content-header {
+			padding: 0 1.75rem;
+			h3 {
+				font-size: 45px;
+			}
+		}
+	}
+	.card-body {
+		padding: 2rem 1rem;
+		.box-paquete-features {
+			ul {
+				list-style: none;
+				padding: 0;
+				line-height: 2em;
+				li {
+					border-bottom: 1px solid rgba(0,0,0,.1);
+					font-size: 16px;
+					i {
+						margin-right: 8px;
+					}
+					&:hover {
+						background: #f5f5f5;
+					}
+				}
+			}
+		}
+	}
+	.card-footer {
+		border: 0;
+		background: transparent;
+		margin: 0 0 1.5rem;
+	}
+	&.featured {
+		.card-header {
+			padding: 0 0 .75rem;
+			.feature {
+				background: @orange;
+				margin-bottom: .5rem;
+				border-radius: .25rem .25rem 0 0;
+				font-size: 14px;
+				padding: .25rem;
+				margin-top: -10px;
+			}
+		}		
+	}
+}
+
+.list-check {
+	li {
+		padding-bottom: 10px;
+	}
+}
+
+footer#footer {
+	background: @primary;
+	color: @white;
+	font-size: 13px;
+	position: relative;
+	overflow: hidden;
+	.container {
+		position: relative;
+		z-index: 1;
+	}
+	a {
+		color: @white;
+		&:hover {
+			color: @white;
+		}
+		&.btn-link {
+			color: @primary;
+			text-decoration: underline;
+			&:hover {
+				color: @white;
+			}
+		}
+	}
+	.title-section {
+		font-size: 60px;
+		text-shadow: 0 0 10px rgba(0,0,0,0.5);
+	}
+	@media ( max-width: 767px ) {
+		.title-section {
+			font-size: 40px;
+		}
+	}
+	div#particles-footer {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 0;
+	}
+}
+
+.slick-slide {
+	padding: 0 1em;
+	text-align: center;
+	img {
+		display: inline-block;
+	}
+}
+
+
+.modal#popup_cotiza {
+	.modal-content {
+		border-radius: 6px;
+		.modal-header {
+			background: @black;
+			border-bottom: 0;
+			.logo-popup {
+				width: 100%;
+			}
+			button.close {
+				position: absolute;
+				padding: 0 !important;
+				margin: 0 !important;
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				background: @black;
+				color: @white;
+				border: 2px solid @white;
+				top: -10px;
+				right: -10px;
+				opacity: 1;
+			}
+		}
+		.modal-body {
+			padding: 0;
+			.col-fondo {
+				background: url('../../images/fondo-beneficios.jpg');
+				background-position: center center;
+				background-size: cover;
+			}
+			.box-popup-content {
+				padding: 2em;
+			}
+			a {
+				color: @white;
+			}
+			.form-cotiza-popup {
+				margin: 1em auto 0;
+				width: 90%;
+			}
+			.form-group {
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+
+
+.loading {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: @black;
+    z-index: 9999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #979797;
+	font-size: 12px;
+	flex-direction: column;
+	.loading-logo {
+		position: absolute;
+		text-align: center;
+		img {
+			animation: fadeIn 1s;
+			animation-delay: 0s;
+		}
+		p {
+			opacity: .3;
+			animation: pulsa 600ms infinite alternate;
+			font-size: 14px;
+		}
+	}
+	@keyframes pulsa {
+		to {
+			opacity: 1;
+		}
+	}
+}
+
+canvas{ 
+	display: block; 
+}
+
+.bg-gray {
+	background: @gray;
+}
+
+a {
+	color: @primary;
+	&:focus,
+	&:active {
+		border:0;
+		outline: none;
+	}
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+a,
+a:active,
+a:focus,
+button:focus,
+button:active {
+	outline: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	padding: 0;
+	margin: 0;
+}
+
+.img-responsive {
+	display: inline-block;
+}
+
+.btn.btn-default {
+	color: @white;
+	background: @black;
+	border: 0;
+	border-radius: 0px;
+	padding: 8px 20px;
+	font-size: 20px;
+	&:hover {
+		background: @primary;
+	}
+}
+
+.btn.btn-primary {
+	background: @primary;
+	color: @white;
+	border: 0;
+	padding: 12px 30px;
+	border-radius: 5px;
+	transition: all 300ms;
+	&:hover {
+		background: @secondary;
+		color: @white;
+	}
+}
+
+.btn.btn-secondary {
+	background: @white;
+	color: @black;
+	font-size: 18px;
+}
+
+.btn.btn-full {
+	width: 100%;
+}
+
+.form-control {
+	background: @white;
+	color: @black;
+	border: 0;
+	border-radius: 0;
+	position: relative;
+	&.resalta {
+		box-shadow: 0 0 10px @primary;
+		animation: pulse .5s;
+	}
+}
+
+/*
+::placeholder {
+  color: @white !important;
+}
+*/
+
+button.close {
+	position: relative;
+	z-index: 9999;
+	opacity: .8;
+	right: 10px;
+	top: 0px;
+	font-size: 24px;
+	font-weight: 300;
+	&:hover {
+	    animation: rubberBand 1s;
+	}
+}
+
+.scrollup {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 55px;
+    right: 40px;
+    display: none;
+    z-index: 999;
+    border: 1px solid rgba(255,255,255,.3);
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    transition: background 300ms;
+    &:before {
+	    content: "\f062";
+	    font-family: "Font Awesome\ 5 Free";
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    border-radius: 3px;
+	    width: 38px;
+	    height: 38px;
+	    line-height: 38px;
+	    text-align: center;
+	    font-size: 16px;
+	    font-weight: 700;
+	    color: @white;
+	}
+	&:hover {
+		background-color: @black;
+	}
+}

@@ -1,0 +1,440 @@
+/*---------- PRESETS ----------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto', serif;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  background: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  color: #000;
+  position: relative;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+.floating {
+  position: fixed;
+  top: 160px;
+  right: 20px;
+  z-index: 1099;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+@media (max-width: 767px) {
+  .floating {
+    width: 40px;
+    height: 40px;
+    top: 100px;
+  }
+}
+.floating.sticky-top {
+  top: 70px;
+  width: 50px;
+  height: 50px;
+}
+#header {
+  background: rgba(0, 0, 0, 0);
+  color: #fff;
+  z-index: 1001;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+#header a {
+  color: #fff;
+}
+#header a.navbar-brand {
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+#header nav.navbar ul.navbar-nav li {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 16px;
+  font-family: 'Roboto', serif;
+  font-weight: 400;
+}
+#header nav.navbar ul.navbar-nav li a {
+  font-size: 16px;
+  font-family: 'Roboto', serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 0 1rem;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+#header nav.navbar ul.navbar-nav li:hover a {
+  color: #df9f15;
+}
+#header ul.menu-movil li {
+  padding: 10px 0;
+}
+#header.sticky {
+  background: rgba(0, 0, 0, 0.9);
+  height: 60px;
+}
+#header.sticky a.navbar-brand img {
+  height: 40px;
+}
+section#beneficios {
+  background: url('../../images/fondo-beneficios.jpg') no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+header#header-section .title-section {
+  font-size: 90px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  header#header-section .title-section {
+    font-size: 60px;
+  }
+}
+@media (max-width: 767px) {
+  header#header-section .title-section {
+    font-size: 45px;
+  }
+}
+.box-content h2 {
+  font-size: 90px;
+}
+.box-content span.subtitle {
+  font-size: 20px;
+}
+.box-content .box-content-text {
+  font-size: 16px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .box-content h2 {
+    font-size: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .box-content h2 {
+    font-size: 45px;
+  }
+}
+.card.card-paquetes {
+  border: 0;
+  background: rgba(255, 255, 255, 0.85);
+}
+.card.card-paquetes .card-header {
+  background: #2d1238;
+  color: #fff;
+  font-size: 20px;
+  padding: .75rem 0;
+}
+.card.card-paquetes .card-header .content-header {
+  padding: 0 1.75rem;
+}
+.card.card-paquetes .card-header .content-header h3 {
+  font-size: 45px;
+}
+.card.card-paquetes .card-body {
+  padding: 2rem 1rem;
+}
+.card.card-paquetes .card-body .box-paquete-features ul {
+  list-style: none;
+  padding: 0;
+  line-height: 2em;
+}
+.card.card-paquetes .card-body .box-paquete-features ul li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+.card.card-paquetes .card-body .box-paquete-features ul li i {
+  margin-right: 8px;
+}
+.card.card-paquetes .card-body .box-paquete-features ul li:hover {
+  background: #f5f5f5;
+}
+.card.card-paquetes .card-footer {
+  border: 0;
+  background: transparent;
+  margin: 0 0 1.5rem;
+}
+.card.card-paquetes.featured .card-header {
+  padding: 0 0 .75rem;
+}
+.card.card-paquetes.featured .card-header .feature {
+  background: #df9f15;
+  margin-bottom: .5rem;
+  border-radius: .25rem .25rem 0 0;
+  font-size: 14px;
+  padding: .25rem;
+  margin-top: -10px;
+}
+.list-check li {
+  padding-bottom: 10px;
+}
+footer#footer {
+  background: #2d1238;
+  color: #fff;
+  font-size: 13px;
+  position: relative;
+  overflow: hidden;
+}
+footer#footer .container {
+  position: relative;
+  z-index: 1;
+}
+footer#footer a {
+  color: #fff;
+}
+footer#footer a:hover {
+  color: #fff;
+}
+footer#footer a.btn-link {
+  color: #2d1238;
+  text-decoration: underline;
+}
+footer#footer a.btn-link:hover {
+  color: #fff;
+}
+footer#footer .title-section {
+  font-size: 60px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 767px) {
+  footer#footer .title-section {
+    font-size: 40px;
+  }
+}
+footer#footer div#particles-footer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
+.slick-slide {
+  padding: 0 1em;
+  text-align: center;
+}
+.slick-slide img {
+  display: inline-block;
+}
+.modal#popup_cotiza .modal-content {
+  border-radius: 6px;
+}
+.modal#popup_cotiza .modal-content .modal-header {
+  background: #000;
+  border-bottom: 0;
+}
+.modal#popup_cotiza .modal-content .modal-header .logo-popup {
+  width: 100%;
+}
+.modal#popup_cotiza .modal-content .modal-header button.close {
+  position: absolute;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  top: -10px;
+  right: -10px;
+  opacity: 1;
+}
+.modal#popup_cotiza .modal-content .modal-body {
+  padding: 0;
+}
+.modal#popup_cotiza .modal-content .modal-body .col-fondo {
+  background: url('../../images/fondo-beneficios.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+.modal#popup_cotiza .modal-content .modal-body .box-popup-content {
+  padding: 2em;
+}
+.modal#popup_cotiza .modal-content .modal-body a {
+  color: #fff;
+}
+.modal#popup_cotiza .modal-content .modal-body .form-cotiza-popup {
+  margin: 1em auto 0;
+  width: 90%;
+}
+.modal#popup_cotiza .modal-content .modal-body .form-group:last-child {
+  margin-bottom: 0;
+}
+.loading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: #000;
+  z-index: 9999;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  color: #979797;
+  font-size: 12px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+.loading .loading-logo {
+  position: absolute;
+  text-align: center;
+}
+.loading .loading-logo img {
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.loading .loading-logo p {
+  opacity: .3;
+  -webkit-animation: pulsa 600ms infinite alternate;
+          animation: pulsa 600ms infinite alternate;
+  font-size: 14px;
+}
+@-webkit-keyframes pulsa {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes pulsa {
+  to {
+    opacity: 1;
+  }
+}
+canvas {
+  display: block;
+}
+.bg-gray {
+  background: #f3f2f2;
+}
+a {
+  color: #2d1238;
+}
+a:focus,
+a:active {
+  border: 0;
+  outline: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a,
+a:active,
+a:focus,
+button:focus,
+button:active {
+  outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+.img-responsive {
+  display: inline-block;
+}
+.btn.btn-default {
+  color: #fff;
+  background: #000;
+  border: 0;
+  border-radius: 0px;
+  padding: 8px 20px;
+  font-size: 20px;
+}
+.btn.btn-default:hover {
+  background: #2d1238;
+}
+.btn.btn-primary {
+  background: #2d1238;
+  color: #fff;
+  border: 0;
+  padding: 12px 30px;
+  border-radius: 5px;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+.btn.btn-primary:hover {
+  background: #191919;
+  color: #fff;
+}
+.btn.btn-secondary {
+  background: #fff;
+  color: #000;
+  font-size: 18px;
+}
+.btn.btn-full {
+  width: 100%;
+}
+.form-control {
+  background: #fff;
+  color: #000;
+  border: 0;
+  border-radius: 0;
+  position: relative;
+}
+.form-control.resalta {
+  box-shadow: 0 0 10px #2d1238;
+  -webkit-animation: pulse .5s;
+          animation: pulse .5s;
+}
+/*
+::placeholder {
+  color: @white !important;
+}
+*/
+button.close {
+  position: relative;
+  z-index: 9999;
+  opacity: .8;
+  right: 10px;
+  top: 0px;
+  font-size: 24px;
+  font-weight: 300;
+}
+button.close:hover {
+  -webkit-animation: rubberBand 1s;
+          animation: rubberBand 1s;
+}
+.scrollup {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  bottom: 55px;
+  right: 40px;
+  display: none;
+  z-index: 999;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  -webkit-transition: background 300ms;
+  transition: background 300ms;
+}
+.scrollup:before {
+  content: "\f062";
+  font-family: "Font Awesome\ 5 Free";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 3px;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+.scrollup:hover {
+  background-color: #000;
+}

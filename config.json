@@ -1,0 +1,267 @@
+{
+    "info": {
+        "titulo": "Hosting - Tu mejor hospedaje web",
+        "descripcion": "Hosting barato",
+        "googleAnalytics": "",
+        "fbPixel": "",
+        "copyright": "© [Y]. Todos los Derechos Reservados Aviso de Privacidad. [company]",
+        "url": "",
+        "logo": "images/logo.png"
+    },
+    "contactos" : {
+        "email" : "atencion.clientes@eldominio.com",
+        "telefono": "(00) 000 0000",
+        "direccion": "Direccion conocida Ciudad cercana en algún pais",
+        "whatsapp": "000000000"
+    },
+    "redes":{
+        "facebook": {
+            "url": "https://www.facebook.com/",
+            "icon": "fab fa-facebook-square"
+        },
+        "twitter": {
+            "url": "https://www.instagram.com/",
+            "icon": "fab fa-instagram"
+        }
+    },
+    "menu": {
+        "class": "navbar-nav w-100 justify-content-between align-items-end",
+        "id": "menu-main",
+        "type": "list",
+        "items": {
+            "Paquetes": {
+                "url": "#paquetes",
+                "class": "nav-item",
+                "target": "",
+                "itemClass": ""
+            },
+            "Beneficios": {
+                "url": "#beneficios",
+                "class": "nav-item",
+                "target": "",
+                "itemClass": ""
+            },
+            "Clientes": {
+                "url": "#clientes",
+                "class": "nav-item",
+                "target": "",
+                "itemClass": ""
+            },
+            "Contacto": {
+                "url": "#contacto",
+                "class": "nav-item",
+                "target": "",
+                "itemClass": ""
+            }
+        }
+    },
+    "forms": {
+        "cotiza": {
+            "action": "",
+            "class": "",
+            "id": "cotiza",
+            "method": "",
+            "containerClass": "box-campos mt-0",
+            "containerId": "",
+            "attribs": {},
+            "mailchimpList": "",
+            "titleMail": "Solicitud de cotización - Frequenza",
+            "successMail": "Gracias por solicitar nuestro folleto, en breve lo recibirá en el email indicado",
+            "errorMail": "",
+            "errorBox": "caja_error",
+            "fields": {
+                "nombre": {
+                    "class": "form-group",
+                    "id": "",
+                    "name": "nombre",
+                    "mailchimpField": "FNAME",
+                    "attribs": {
+                        "type": "text",
+                        "class": "form-control border border-dark",
+                        "id": "",
+                        "value": "",
+                        "placeholder": "Nombre completo",
+                        "attribs": {},
+                        "required": 1
+                    }
+                },
+                "email": {
+                    "class": "form-group",
+                    "id": "",
+                    "name": "email",
+                    "attribs": {
+                        "type": "email",
+                        "class": "form-control border border-dark",
+                        "id": "",
+                        "value": "",
+                        "placeholder": "Ingresa tu Email",
+                        "attribs": {},
+                        "required": 1
+                    }
+                },
+                "telefono": {
+                    "class": "form-group",
+                    "id": "",
+                    "name": "telefono",
+                    "attribs": {
+                        "type": "text",
+                        "class": "form-control border border-dark",
+                        "id": "",
+                        "value": "",
+                        "placeholder": "Indicanos tu teléfono",
+                        "attribs": {},
+                        "required": 1
+                    }
+                },
+                "producto": {
+                    "class": "",
+                    "id": "",
+                    "name": "producto",
+                    "attribs": {
+                        "type": "hidden",
+                        "class": "",
+                        "id": "producto",
+                        "value": "",
+                        "attribs": {}
+                    }
+                },
+                "submit": {
+                    "class": "form-group",
+                    "id": "",
+                    "attribs": {
+                        "type": "submit",
+                        "class": "btn btn-primary btn-full mb-3",
+                        "id": "",
+                        "value": "COTIZAR AHORA",
+                        "attribs": {}
+                    }
+                }
+            }
+        },
+        "contacto": {
+            "action": "",
+            "class": "",
+            "id": "contacto",
+            "method": "",
+            "containerClass": "row",
+            "containerId": "",
+            "attribs": {},
+            "mailchimpList": "",
+            "errorBox": "form-group col-12 caja_error",
+            "titleMail": "Solicitud de contacto - Frequenza",
+            "successMail": "Gracias por contactarnos, en breve le daremos seguimiento a su solicitud",
+            "errorMail": "",
+            "fields": {
+                "nombre": {
+                    "class": "form-group col-md-4",
+                    "id": "",
+                    "name": "nombre",
+                    "mailchimpField": "FNAME",
+                    "attribs": {
+                        "type": "text",
+                        "class": "form-control",
+                        "id": "",
+                        "value": "",
+                        "placeholder": "Nombre completo",
+                        "required": 1
+                    }
+                },
+                "email": {
+                    "class": "form-group col-md-4",
+                    "id": "",
+                    "name": "email",
+                    "attribs": {
+                        "type": "email",
+                        "class": "form-control",
+                        "id": "",
+                        "value": "",
+                        "placeholder": "Email",
+                        "required": 1
+                    }
+                },
+                "celular": {
+                    "class": "form-group col-md-4",
+                    "id": "",
+                    "name": "telefono",
+                    "mailchimpField": "PHONE",
+                    "attribs": {
+                        "type": "tel",
+                        "class": "form-control",
+                        "id": "",
+                        "value": "",
+                        "placeholder": "Telefono",
+                        "required": 0
+                    }
+                },
+                "comentarios": {
+                    "class": "form-group col-12",
+                    "id": "",
+                    "name": "comentarios",
+                    "mailchimpField": "",
+                    "attribs": {
+                        "type": "text",
+                        "class": "form-control",
+                        "id": "",
+                        "value": "",
+                        "placeholder": "Comentarios",
+                        "required": 0
+                    }
+                },            
+                "submit": {
+                    "class": "form-group col-12 text-center",
+                    "id": "",
+                    "attribs": {
+                        "type": "submit",
+                        "class": "btn btn-primary px-md-5",
+                        "id": "",
+                        "value": "Cotizar",
+                        "attribs": {}
+                    }
+                }                
+            }
+        }        
+    },
+    "configuracion": {
+        "openGraph": 1,
+        "gotop": 1,
+        "popup": 1,
+        "revolution": 1,
+        "loading": 0,
+        "particlesFooter": 1,
+        "fonts": {
+            "Roboto": {
+                "fontfamily": "Roboto, serif",
+                "weight": "400"
+            },
+            "Open Sans": {
+                "fontfamily": "'Open Sans', sans-serif",
+                "weight": "400,600,700"
+            }
+        },
+        "assets": {
+            "slick": 1,
+            "matchHeight": 1,
+            "aos": 1,
+            "animate": 1,
+            "fontawesome": 1
+        },
+        "mailer": {
+            "auth": 0,
+            "to": "contacto@frequenzaeventos.com",
+            "cc": "",
+            "bcc": "osuna@adview.mx",
+            "replyTo": "",
+            "from": "contacto@frequenzaeventos.com",
+            "fromName": "Frequenza",
+            "host": "",
+            "port": "",
+            "smtpSecure": "tls",
+            "userName": "",
+            "password": ""
+        },
+        "mailchimp": {
+            "use": 0,
+            "api": ""
+        }
+    }
+}
