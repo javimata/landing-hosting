@@ -367,12 +367,12 @@ $config = getConfig();
 		<?php endif; ?>
 
 		<?php if ( $config->configuracion->assets->slick == 1 ): ?>
-		<script type="text/javascript" src="./node_modules/slick-carousel/slick/slick.min.js"></script>
+		<script src="./node_modules/slick-carousel/slick/slick.min.js"></script>
 		<?php endif; ?>
 
 		<?php if ( $config->configuracion->revolution == 1 ): ?>
 		<!-- revolution -->
-		<script type="text/javascript" src="assets/js/revolution.init.js"></script>
+		<script src="assets/js/revolution.init.js"></script>
 		<script src="revolution/js/jquery.themepunch.tools.min.js"></script>
 		<script src="revolution/js/jquery.themepunch.revolution.min.js"></script>
 		<!-- revolution extension -->
