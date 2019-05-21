@@ -3,7 +3,8 @@
 
 ```  
 git clone https://github.com/javimata/landing-hosting.git  
-composer install  
+composer install 
+npm install
 npm run start  
 ```
 
