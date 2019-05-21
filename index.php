@@ -37,27 +37,8 @@ $config = getConfig();
 		<?php endif; ?>
 
 		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-
-		<?php if ( $config->configuracion->assets->slick == 1 ): ?>
-		<link rel="stylesheet" type="text/css" href="./node_modules/slick-carousel/slick/slick.css">
-		<link rel="stylesheet" type="text/css" href="./node_modules/slick-carousel/slick/slick-theme.css">
-		<?php endif; ?>
-
-		<?php if ( $config->configuracion->assets->fontawesome == 1 ): ?>
-		<link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
-		<?php endif; ?>
-
-		<?php if ( $config->configuracion->assets->animate == 1 ): ?>
-		<link rel="stylesheet" href="./node_modules/animate.css/animate.min.css">
-		<?php endif; ?>
-		<?php if ( $config->configuracion->assets->aos == 1 ): ?>
-		<link rel="stylesheet" href="./node_modules/aos/dist/aos.css">
-		<?php endif; ?>
-
-		<link rel="stylesheet" href="./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css" />
-
-		<link rel="stylesheet" href="assets/css/styles.css">
+		<link rel="stylesheet" href="dist/css/app.css">
+		<link rel="stylesheet" href="dist/css/styles.css">
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -346,6 +327,8 @@ $config = getConfig();
 			<?php include_once "popup.php"; ?>
 		<?php endif ?>
 
+		<script src="dist/js/app.js"></script>
+
 		<script type="text/javascript">
 			var jam_gotop = '<?php echo $config->configuracion->gotop; ?>';
 			var jam_popup = '<?php echo $config->configuracion->popup; ?>';
@@ -356,19 +339,6 @@ $config = getConfig();
 		<a href="javascript:void(0)" class="scrollup" aria-label="">&nbsp;</a>
 		<?php endif; ?>
 
-		<!-- jQuery -->
-		<script src="./node_modules/jquery/dist/jquery.min.js"></script>
-
-		<!-- Bootstrap JavaScript -->
-		<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
-		<?php if ( $config->configuracion->assets->matchHeight == 1 ): ?>
-		<script src="./node_modules/jquery-match-height/dist/jquery.matchHeight-min.js"></script>
-		<?php endif; ?>
-
-		<?php if ( $config->configuracion->assets->slick == 1 ): ?>
-		<script src="./node_modules/slick-carousel/slick/slick.min.js"></script>
-		<?php endif; ?>
 
 		<?php if ( $config->configuracion->revolution == 1 ): ?>
 		<!-- revolution -->
@@ -387,11 +357,6 @@ $config = getConfig();
 		<script src="revolution/js/extensions/revolution.extension.video.min.js"></script>
 		<?php endif; ?>
 
-		<script src="./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
-		
-		<?php if ( $config->configuracion->loading == 1 || $config->configuracion->particlesFooter == 1 ): ?>
-		<script src="./node_modules/particles.js/particles.js"></script>
-		<?php endif; ?>
 		<?php if ( $config->configuracion->loading == 1 ): ?>
 		<script>
 			particlesJS.load('particles-js', 'assets/particlesjs-config.json', function() {});
@@ -399,9 +364,7 @@ $config = getConfig();
 		<?php endif; ?>
 
 		<?php if ( $config->configuracion->assets->aos == 1 ): ?>
-		<script src="./node_modules/aos/dist/aos.js"></script>
 		<script>
-		
 		AOS.init({
 			easing: 'ease-out-back',
 			duration: 1000,
@@ -410,7 +373,7 @@ $config = getConfig();
 		</script>
 		<?php endif; ?>
 
-		<script src="assets/js/scripts.js"></script>
+		<script src="dist/js/bundle.js"></script>
 
 	</body>
 </html>
