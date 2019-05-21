@@ -18,7 +18,7 @@ gulp.task('styles', function () {
             browsers: ['last 3 versions']
         }))
         .pipe(minify())
-        .pipe(gulp.dest('./dist/css'))
+        .pipe(gulp.dest('./dist/css'));
 });
 
 gulp.task('js', function () {
