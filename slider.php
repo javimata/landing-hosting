@@ -68,7 +68,7 @@
 							<li><img src="images/list-check.png" class="img-fluid"> Almacenamiento SSD</li>
 						</ul>
 					</div>
-				</li>			
+				</li>
             </ul>
         </div>
     </div>

@@ -19,7 +19,7 @@ jQuery(function($) {
             onHoverStop: "off",
             arrows: {
                 style: "hesperiden",
-                enable: true,
+                enable: false,
                 hide_onmobile: false,
                 hide_onleave: false,
                 tmp: '',
