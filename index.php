@@ -328,6 +328,7 @@ $config = getConfig();
 		<?php endif ?>
 
 		<script src="dist/js/app.js"></script>
+		<script src="dist/js/revolution.js"></script>
 
 		<script type="text/javascript">
 			var jam_gotop = '<?php echo $config->configuracion->gotop; ?>';
@@ -337,23 +338,6 @@ $config = getConfig();
 
 		<?php if ( $config->configuracion->gotop == 1 ): ?>
 		<a href="javascript:void(0)" class="scrollup" aria-label="">&nbsp;</a>
-		<?php endif; ?>
-
-
-		<?php if ( $config->configuracion->revolution == 1 ): ?>
-		<!-- revolution -->
-		<script src="revolution/js/jquery.themepunch.tools.min.js"></script>
-		<script src="revolution/js/jquery.themepunch.revolution.min.js"></script>
-		<!-- revolution extension -->
-		<script src="revolution/js/extensions/revolution.extension.actions.min.js"></script>
-		<script src="revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-		<script src="revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-		<script src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-		<script src="revolution/js/extensions/revolution.extension.migration.min.js"></script>
-		<script src="revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-		<script src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-		<script src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-		<script src="revolution/js/extensions/revolution.extension.video.min.js"></script>
 		<?php endif; ?>
 
 		<?php if ( $config->configuracion->loading == 1 ): ?>

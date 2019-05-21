@@ -73,6 +73,27 @@ gulp.task('compile-js', function () {
 });
 
 /**
+ * Genera archivo app.js de dependencias
+ */
+gulp.task('compile-revolution', function () {
+    gulp.src([
+        './revolution/js/jquery.themepunch.tools.min.js',
+        './revolution/js/jquery.themepunch.revolution.min.js',
+        './revolution/js/extensions/revolution.extension.actions.min.js',
+        './revolution/js/extensions/revolution.extension.carousel.min.js',
+        './revolution/js/extensions/revolution.extension.kenburn.min.js',
+        './revolution/js/extensions/revolution.extension.layeranimation.min.js',
+        './revolution/js/extensions/revolution.extension.migration.min.js',
+        './revolution/js/extensions/revolution.extension.navigation.min.js',
+        './revolution/js/extensions/revolution.extension.parallax.min.js',
+        './revolution/js/extensions/revolution.extension.slideanims.min.js',
+        './revolution/js/extensions/revolution.extension.video.min.js'
+    ])
+    .pipe(concat('revolution.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./dist/js/'));
+});
+/**
  * Watchs para archivos principales, no se checan dependencias
  */
 gulp.task('watch', function(){
@@ -83,4 +104,4 @@ gulp.task('watch', function(){
 /**
  * Genera archivos de arranque
  */
-gulp.task('default', gulp.parallel('compile-css', 'styles', 'compile-js', 'scripts'));
+gulp.task('default', gulp.parallel('compile-css', 'styles', 'compile-js', 'compile-revolution', 'scripts'));
