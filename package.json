@@ -1,6 +1,7 @@
 {
   "name": "landing",
   "version": "1.0.0",
+  "private": true,
   "description": "",
   "main": "index.php",
   "scripts": {
@@ -11,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
+    "@fortawesome/fontawesome-free": "^5.8.2",
     "animate.css": "^3.7.0",
     "aos": "^3.0.0-beta.6",
     "bootstrap": ">=4.3.1",
@@ -18,14 +20,10 @@
     "jquery-match-height": "^0.7.2",
     "particles.js": "^2.0.0",
     "popper.js": "^1.15.0",
-    "slick-carousel": "^1.8.1",
-    "@fortawesome/fontawesome-free": "^5.8.2"
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
-    "css-loader": "^2.1.1",
-    "less-loader": "^5.0.0",
-    "style-loader": "^0.23.1",
-    "webpack": "^4.31.0",
-    "webpack-cli": "^3.3.2"
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.2.0"
   }
 }
