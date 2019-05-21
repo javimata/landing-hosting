@@ -248,7 +248,7 @@
         "popup": 1,
         "revolution": 1,
         "loading": 0,
-        "particlesFooter": 0,
+        "particlesFooter": 1,
         "fonts": {
             "Roboto": {
                 "fontfamily": "Roboto, serif",
