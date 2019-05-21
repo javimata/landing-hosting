@@ -41,6 +41,7 @@ gulp.task('scripts', function () {
  */
 gulp.task('compile-css', function () {
     gulp.src([
+        './revolution/css/settings.css',
         nodepath + 'bootstrap/dist/css/bootstrap.min.css',
         nodepath + 'slick-carousel/slick/slick.css',
         nodepath + 'slick-carousel/slick/slick-theme.css',

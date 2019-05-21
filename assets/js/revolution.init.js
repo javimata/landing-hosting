@@ -12,7 +12,30 @@ jQuery(function($) {
         dottedOverlay: "none",
         delay: 9000,
         navigation: {
+            keyboardNavigation: "off",
+            keyboard_direction: "horizontal",
+            mouseScrollNavigation: "off",
+            mouseScrollReverse: "default",
             onHoverStop: "off",
+            arrows: {
+                style: "hesperiden",
+                enable: true,
+                hide_onmobile: false,
+                hide_onleave: false,
+                tmp: '',
+                left: {
+                    h_align: "left",
+                    v_align: "center",
+                    h_offset: 20,
+                    v_offset: 0
+                },
+                right: {
+                    h_align: "right",
+                    v_align: "center",
+                    h_offset: 20,
+                    v_offset: 0
+                }
+            }
         },
         parallax: {
             type: 'mouse+scroll',

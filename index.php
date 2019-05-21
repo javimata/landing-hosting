@@ -31,11 +31,6 @@ $config = getConfig();
 		<link href="https://fonts.googleapis.com/css?family=<?php echo str_replace(" ","+",$key); ?><?php if ( $fonts->weight != "") { echo ":" . str_replace(" ","",$fonts->weight); } ?>" rel="stylesheet">
 		<?php endforeach; ?>
 
-		<?php if ( $config->configuracion->revolution == 1 ): ?>
-		<!-- revolution slider -->
-    	<link rel="stylesheet" href="revolution/css/settings.css"/>
-		<?php endif; ?>
-
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="dist/css/app.css">
 		<link rel="stylesheet" href="dist/css/styles.css">
