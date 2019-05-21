@@ -342,7 +342,6 @@ $config = getConfig();
 
 		<?php if ( $config->configuracion->revolution == 1 ): ?>
 		<!-- revolution -->
-		<script src="assets/js/revolution.init.js"></script>
 		<script src="revolution/js/jquery.themepunch.tools.min.js"></script>
 		<script src="revolution/js/jquery.themepunch.revolution.min.js"></script>
 		<!-- revolution extension -->

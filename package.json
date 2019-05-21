@@ -5,8 +5,8 @@
   "description": "",
   "main": "index.php",
   "scripts": {
-    "test": "test",
-    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build/"
+    "start": "gulp",
+    "watch": "gulp watch"
   },
   "author": "",
   "license": "ISC",

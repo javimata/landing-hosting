@@ -1,31 +1,17 @@
 const gulp         = require('gulp');
-const watch        = require('gulp-watch');
 const path         = require('path');
 const less         = require('gulp-less');
 const autoprefixer = require('gulp-autoprefixer');
 const minify       = require('gulp-minify-css');
-const jshint       = require('gulp-jshint');
-const stylish      = require('jshint-stylish');
 const uglify       = require('gulp-uglify');
 const concat       = require('gulp-concat');
 const nodepath     = 'node_modules/';
 
-/*
-gulp.task('js', function () {
-    gulp.src('./assets/js/*.js')
-        .pipe(jshint())
-        .pipe(jshint.reporter(stylish))
-        .pipe(gulp.dest('./dist/js'));
-});
-
-gulp.task('concat', function () {
-    gulp.src('./assets/js/*.js')
-        .pipe(concat('bundle.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('./dist/js'));
-});
-*/
-
+/**
+ * Genera el archivo principal de styles a partir de Less
+ * File assets/less/*.less
+ * Toma todos los .less de la carpeta
+ */
 gulp.task('styles', function () {
     gulp.src('./assets/less/*.less')
         .pipe(less({
@@ -38,6 +24,11 @@ gulp.task('styles', function () {
         .pipe(gulp.dest('./dist/css'));
 });
 
+/**
+ * Genera el archivo principal de scripts a partir de js
+ * File assets/js/*.js
+ * Toma todos los archivos .js de la carpeta
+ */
 gulp.task('scripts', function () {
     gulp.src('./assets/js/*.js')
         .pipe(concat('bundle.js'))
@@ -45,6 +36,9 @@ gulp.task('scripts', function () {
         .pipe(gulp.dest('./dist/js'));
 });
 
+/**
+ * Genera archivo app.css de dependencias
+ */
 gulp.task('compile-css', function () {
     gulp.src([
         nodepath + 'bootstrap/dist/css/bootstrap.min.css',
@@ -60,6 +54,9 @@ gulp.task('compile-css', function () {
     .pipe(gulp.dest('./dist/css/'));
 });
 
+/**
+ * Genera archivo app.js de dependencias
+ */
 gulp.task('compile-js', function () {
     gulp.src([
         nodepath + 'jquery/dist/jquery.min.js', 
@@ -75,11 +72,15 @@ gulp.task('compile-js', function () {
     .pipe(gulp.dest('./dist/js/'));
 });
 
-/*
+/**
+ * Watchs para archivos principales, no se checan dependencias
+ */
 gulp.task('watch', function(){
     gulp.watch('./assets/less/**', gulp.series('styles'));
     gulp.watch('./assets/js/**', gulp.series('scripts'));
 });
-*/
 
+/**
+ * Genera archivos de arranque
+ */
 gulp.task('default', gulp.parallel('compile-css', 'styles', 'compile-js', 'scripts'));
