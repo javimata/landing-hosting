@@ -1,3 +1,8 @@
+/**
+ * Scripts base
+ * Author Javi_Mata <javimata@gmail.com>
+ */
+
 (function ($) {
 	
 	$(document).ready(function(){
