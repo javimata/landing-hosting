@@ -27,9 +27,7 @@ $config = getConfig();
 		<link rel="icon" href="images/favicon.png" type="image/x-icon">
 
 		<!-- GOOGLE FONT -->
-		<?php foreach( $config->configuracion->fonts as $key => $fonts ): ?> 
-		<link href="https://fonts.googleapis.com/css?family=<?php echo str_replace(" ","+",$key); ?><?php if ( $fonts->weight != "") { echo ":" . str_replace(" ","",$fonts->weight); } ?>" rel="stylesheet">
-		<?php endforeach; ?>
+		<link href="https://fonts.googleapis.com/css?family=<?php echo configFonts(); ?>" rel="stylesheet">
 
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="dist/css/app.css">
@@ -44,7 +42,7 @@ $config = getConfig();
 
 		<?php if ( $config->info->fbPixel != "" ): ?>
 		<!-- Facebook Pixel Code -->
-		<script>
+		<script async>
 		!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 		n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
 		n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
@@ -330,7 +328,7 @@ $config = getConfig();
 		<script defer src="dist/js/revolution.js"></script>
 		<?php endif ?>
 
-		<script type="text/javascript">
+		<script defer type="text/javascript">
 			var jam_gotop = '<?php echo $config->configuracion->gotop; ?>';
 			var jam_popup = '<?php echo $config->configuracion->popup; ?>';
 			var jam_particlesFooter = '<?php echo $config->configuracion->particlesFooter; ?>';

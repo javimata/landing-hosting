@@ -451,6 +451,24 @@ function replaceValues( $value = NULL ) {
 
 }
 
+/**
+ * configure Forms
+ * return fonts
+ */
+function configFonts() {
+
+    $config = getConfig();
+    $fonts  = "";
+
+    foreach( $config->configuracion->fonts as $key => $font ): 
+        $fonts .=  str_replace(" ","+",$key); 
+        if ( $font->weight != "") { $fonts .= ":" . str_replace(" ","",$font->weight); }
+        $fonts .= "|";    
+    endforeach;
+
+    return $fonts;
+
+}
 
 /**
  * Slug
