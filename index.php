@@ -323,6 +323,7 @@ $config = getConfig();
 		<?php endif ?>
 
 		<script src="dist/js/main.js"></script>
+		<script defer src="dist/js/bootstrap.bundle.js"></script>
 		<script defer src="dist/js/app.js"></script>
 
 		<?php if ( $config->configuracion->revolution == 1 ): ?>

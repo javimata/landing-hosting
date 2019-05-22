@@ -61,12 +61,17 @@ gulp.task('compile-css', function () {
 gulp.task('compile-js', function () {
     gulp.src([
         nodepath + 'jquery/dist/jquery.min.js', 
-        nodepath + 'bootstrap/dist/js/bootstrap.bundle.min.js',
         nodepath + 'aos/dist/aos.js'
     ])
     .pipe(concat('main.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./dist/js/'));
+    gulp.src([
+        nodepath + 'bootstrap/dist/js/bootstrap.bundle.min.js'
+    ])
+        .pipe(concat('bootstrap.bundle.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./dist/js/'));
     gulp.src([
         nodepath + 'jquery-match-height/dist/jquery.matchHeight-min.js',
         nodepath + 'slick-carousel/slick/slick.min.js',
