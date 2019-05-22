@@ -74,7 +74,7 @@ gulp.task('compile-js', function () {
 });
 
 /**
- * Genera archivo app.js de dependencias
+ * Genera archivo revolution.js de dependencias de Revolution Slider
  */
 gulp.task('compile-revolution', function () {
     gulp.src([
@@ -94,6 +94,7 @@ gulp.task('compile-revolution', function () {
     .pipe(uglify())
     .pipe(gulp.dest('./dist/js/'));
 });
+
 /**
  * Watchs para archivos principales, no se checan dependencias
  */
