@@ -323,7 +323,10 @@ $config = getConfig();
 		<?php endif ?>
 
 		<script src="dist/js/app.js"></script>
+
+		<?php if ( $config->configuracion->revolution == 1 ): ?>
 		<script src="dist/js/revolution.js"></script>
+		<?php endif ?>
 
 		<script type="text/javascript">
 			var jam_gotop = '<?php echo $config->configuracion->gotop; ?>';
@@ -351,7 +354,7 @@ $config = getConfig();
 		</script>
 		<?php endif; ?>
 
-		<script src="dist/js/bundle.js"></script>
+		<script async src="dist/js/bundle.js"></script>
 
 	</body>
 </html>
