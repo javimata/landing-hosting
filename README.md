@@ -7,7 +7,7 @@
 git clone https://github.com/javimata/landing-hosting.git  
 composer install 
 npm install
-npm run start  
+gulp  
 ```
 
 <a href="http://demos.javimata.com/landing-hosting/" target="_blank">VER AQUÍ</a>
