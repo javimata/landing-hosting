@@ -443,8 +443,8 @@ function addAttribs($attribs){
 function replaceValues( $value = NULL ) {
 
     $config = getConfig();
-    $arrayBase    = array('[Y]','[NOW]','[TOMORROW]','[company]');
-    $arrayReplace = array(date('Y'), date('Y-m-d'),date('Y-m-d', strtotime("+ 1 day")),'<a href="#" target="_blank">'.$config->info->titulo.'</a>');
+    $arrayBase    = array('[Y]','[NOW]','[TOMORROW]','[company]','[adview]');
+    $arrayReplace = array(date('Y'), date('Y-m-d'),date('Y-m-d', strtotime("+ 1 day")),'<a href="#" target="_blank">'.$config->info->titulo.'</a>','<a href="http://www.adview.mx" target="_blank"><img src="images/logo-adview.png" class="img-fluid" /></a>');
     $value = str_replace( $arrayBase, $arrayReplace, $value );
 
     return $value;
