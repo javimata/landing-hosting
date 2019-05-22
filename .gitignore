@@ -8,3 +8,4 @@ composer.lock
 !.gitignore
 !.editorconfig
 !.phpcs.xml.dist
+dist

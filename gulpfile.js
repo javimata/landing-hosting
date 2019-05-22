@@ -100,6 +100,22 @@ gulp.task('compile-revolution', function () {
     .pipe(gulp.dest('./dist/js/'));
 });
 
+// Fonts
+gulp.task('fonts', function () {
+    gulp.src([
+        nodepath + '/@fortawesome/fontawesome-free/webfonts/**'])
+        .pipe(gulp.dest('dist/webfonts/'));
+    gulp.src([
+        nodepath + 'slick-carousel/slick/fonts/**'])
+        .pipe(gulp.dest('dist/css/fonts/'));
+    gulp.src([
+        nodepath + 'slick-carousel/slick/ajax-loader.gif'])
+        .pipe(gulp.dest('dist/css/'));
+    gulp.src([
+        './revolution/fonts/revicons/**'])
+        .pipe(gulp.dest('dist/fonts/revicons/'));
+});
+
 /**
  * Watchs para archivos principales, no se checan dependencias
  */
@@ -111,4 +127,4 @@ gulp.task('watch', function(){
 /**
  * Genera archivos de arranque
  */
-gulp.task('default', gulp.parallel('compile-css', 'styles', 'compile-js', 'compile-revolution', 'scripts'));
+gulp.task('default', gulp.parallel('compile-css', 'styles', 'compile-js', 'compile-revolution', 'scripts', 'fonts'));
