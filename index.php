@@ -322,10 +322,11 @@ $config = getConfig();
 			<?php include_once "popup.php"; ?>
 		<?php endif ?>
 
-		<script src="dist/js/app.js"></script>
+		<script src="dist/js/main.js"></script>
+		<script defer src="dist/js/app.js"></script>
 
 		<?php if ( $config->configuracion->revolution == 1 ): ?>
-		<script src="dist/js/revolution.js"></script>
+		<script defer src="dist/js/revolution.js"></script>
 		<?php endif ?>
 
 		<script type="text/javascript">
@@ -341,16 +342,6 @@ $config = getConfig();
 		<?php if ( $config->configuracion->loading == 1 ): ?>
 		<script>
 			particlesJS.load('particles-js', 'assets/particlesjs-config.json', function() {});
-		</script>
-		<?php endif; ?>
-
-		<?php if ( $config->configuracion->assets->aos == 1 ): ?>
-		<script>
-		AOS.init({
-			easing: 'ease-out-back',
-			duration: 1000,
-			once: false
-		});
 		</script>
 		<?php endif; ?>
 

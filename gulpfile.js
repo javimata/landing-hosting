@@ -62,15 +62,20 @@ gulp.task('compile-js', function () {
     gulp.src([
         nodepath + 'jquery/dist/jquery.min.js', 
         nodepath + 'bootstrap/dist/js/bootstrap.bundle.min.js',
+        nodepath + 'aos/dist/aos.js'
+    ])
+    .pipe(concat('main.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./dist/js/'));
+    gulp.src([
         nodepath + 'jquery-match-height/dist/jquery.matchHeight-min.js',
         nodepath + 'slick-carousel/slick/slick.min.js',
         nodepath + '@fancyapps/fancybox/dist/jquery.fancybox.min.js',
-        nodepath + 'particles.js/particles.js',
-        nodepath + 'aos/dist/aos.js'
+        nodepath + 'particles.js/particles.js'
     ])
-    .pipe(concat('app.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('./dist/js/'));
+        .pipe(concat('app.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('./dist/js/'));
 });
 
 /**

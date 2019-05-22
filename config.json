@@ -247,7 +247,7 @@
         "gotop": 1,
         "popup": 1,
         "revolution": 1,
-        "loading": 1,
+        "loading": 0,
         "particlesFooter": 1,
         "fonts": {
             "Roboto": {

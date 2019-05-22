@@ -7,6 +7,12 @@
 	
 	$(document).ready(function(){
 
+		AOS.init({
+			easing: 'ease-out-back',
+			duration: 1000,
+			once: false
+		});
+
 		if ( $('.slide-logos').length > 0 ) {
 
 			$('.slide-logos').on('init', function (event, slick) {
