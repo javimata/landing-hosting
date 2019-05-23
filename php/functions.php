@@ -466,7 +466,7 @@ function configFonts() {
         $fonts .= "|";    
     endforeach;
 
-    return $fonts;
+    return trim(trim($fonts,"|"),"+");
 
 }
 
