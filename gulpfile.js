@@ -44,7 +44,7 @@ if ( config.configuracion.particlesFooter == 1 ) {
  * File assets/less/*.less
  * Toma todos los .less de la carpeta
  */
-gulp.task('styles', function () {
+gulp.task('styles', function (done) {
     gulp.src('./assets/less/*.less')
         .pipe(less({
             paths: [path.join(__dirname, 'less', 'includes')]
@@ -54,6 +54,7 @@ gulp.task('styles', function () {
         }))
         .pipe(minify())
         .pipe(gulp.dest('./dist/css'));
+    done();
 });
 
 /**
@@ -61,27 +62,29 @@ gulp.task('styles', function () {
  * File assets/js/*.js
  * Toma todos los archivos .js de la carpeta
  */
-gulp.task('scripts', function () {
+gulp.task('scripts', function (done) {
     gulp.src('./assets/js/*.js')
         .pipe(concat('bundle.js'))
         .pipe(uglify())
         .pipe(gulp.dest('./dist/js'));
+    done();
 });
 
 /**
  * Genera archivo app.css de dependencias
  */
-gulp.task('compile-css', function () {
+gulp.task('compile-css', function (done) {
     gulp.src(assetsAPPCSS)
-    .pipe(concat('app.css'))
-    .pipe(minify())
-    .pipe(gulp.dest('./dist/css/'));
+        .pipe(concat('app.css'))
+        .pipe(minify())
+        .pipe(gulp.dest('./dist/css/'));
+    done();
 });
 
 /**
  * Genera archivo app.js de dependencias
  */
-gulp.task('compile-js', function () {
+gulp.task('compile-js', function (done) {
     gulp.src([
         nodepath + 'jquery/dist/jquery.min.js', 
         nodepath + 'aos/dist/aos.js'
@@ -121,11 +124,12 @@ gulp.task('compile-js', function () {
             './revolution/fonts/revicons/**'])
             .pipe(gulp.dest('dist/fonts/revicons/'));
     }
+    done();
 });
 
 
 // Fonts
-gulp.task('fonts', function () {
+gulp.task('fonts', function (done) {
     if ( config.configuracion.assets.fontawesome == 1 ) {
         gulp.src([
             nodepath + '/@fortawesome/fontawesome-free/webfonts/**'])
@@ -139,14 +143,16 @@ gulp.task('fonts', function () {
             nodepath + 'slick-carousel/slick/ajax-loader.gif'])
             .pipe(gulp.dest('dist/css/'));
     }
+    done();
 });
 
 /**
  * Watchs para archivos principales, no se checan dependencias
  */
-gulp.task('watch', function(){
-    gulp.watch('./assets/less/**', gulp.series('styles'));
-    gulp.watch('./assets/js/**', gulp.series('scripts'));
+gulp.task('watch', function(done){
+    gulp.watch('./assets/less/**.less', gulp.series('styles'));
+    gulp.watch('./assets/js/**.js', gulp.series('scripts'));
+    done();
 });
 
 /**
