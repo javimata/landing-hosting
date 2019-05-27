@@ -249,16 +249,7 @@
         "revolution": 1,
         "loading": 0,
         "particlesFooter": 1,
-        "fonts": {
-            "Roboto": {
-                "fontfamily": "Roboto, serif",
-                "weight": "400"
-            },
-            "Open Sans": {
-                "fontfamily": "'Open Sans', sans-serif",
-                "weight": "400,600,700"
-            }
-        },
+        "fonts": {},
         "assets": {
             "slick": 1,
             "matchHeight": 1,

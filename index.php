@@ -26,8 +26,10 @@ $config = getConfig();
 		<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 		<link rel="icon" href="images/favicon.png" type="image/x-icon">
 
+		<?php if ( configFonts() != "" ): ?>
 		<!-- GOOGLE FONT -->
 		<link href="https://fonts.googleapis.com/css?family=<?php echo configFonts(); ?>" rel="stylesheet">
+		<?php endif; ?>
 
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="dist/css/app.css">
@@ -71,7 +73,7 @@ $config = getConfig();
 		<?php endif ?>
 
 	</head>
-	<body>
+	<body data-gotop="<?php echo $config->configuracion->gotop; ?>" data-popup="<?php echo $config->configuracion->popup; ?>" data-particles="<?php echo $config->configuracion->particlesFooter; ?>">
 
 		<?php if ( $config->configuracion->loading == 1 ): ?>
 		<div class="loading" id="particles-js">
@@ -321,21 +323,10 @@ $config = getConfig();
 		<?php endif ?>
 
 		<script src="dist/js/main.js"></script>
-		<script defer src="dist/js/bootstrap.bundle.js"></script>
 		<script defer src="dist/js/app.js"></script>
 
-		<?php if ( $config->configuracion->revolution == 1 ): ?>
-		<script defer src="dist/js/revolution.js"></script>
-		<?php endif ?>
-
-		<script defer type="text/javascript">
-			var jam_gotop = '<?php echo $config->configuracion->gotop; ?>';
-			var jam_popup = '<?php echo $config->configuracion->popup; ?>';
-			var jam_particlesFooter = '<?php echo $config->configuracion->particlesFooter; ?>';
-		</script>
-
 		<?php if ( $config->configuracion->gotop == 1 ): ?>
-		<a href="javascript:void(0)" class="scrollup" aria-label="">&nbsp;</a>
+		<a href="#" class="scrollup" aria-label="">&nbsp;</a>
 		<?php endif; ?>
 
 		<?php if ( $config->configuracion->loading == 1 ): ?>

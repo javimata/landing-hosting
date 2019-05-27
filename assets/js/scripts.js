@@ -7,6 +7,10 @@
 	
 	$(document).ready(function(){
 
+		var jam_gotop = $('body').data("gotop");
+		var jam_popup = $('body').data("popup");
+		var jam_particlesFooter = $('body').data("particles");
+
 		AOS.init({
 			easing: 'ease-out-back',
 			duration: 1000,
